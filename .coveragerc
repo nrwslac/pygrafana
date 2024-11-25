@@ -1,0 +1,11 @@
+[run]
+source =
+    pygrafana
+[report]
+omit =
+    #versioning
+    .*version.*
+    *_version.py
+    #tests
+    *test*
+    pygrafana/tests/*
