@@ -124,7 +124,7 @@ def main(argv):
                 raise ValueError("Labels must be a dictionary")
             update_alert(options.alert_id,labels=labels) 
         except json.JSONDecodeError:
-            print("Error: Annotations must be a valid JSON")
+            print("Error: Labels must be a valid JSON")
             exit(1)
     elif options.alert_id and options.title:
         update_alert(options.alert_id, title=options.title) 
