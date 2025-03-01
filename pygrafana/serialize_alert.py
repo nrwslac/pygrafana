@@ -78,7 +78,7 @@ class ProvisionedAlertRule(BaseModel):
     isPaused: Optional[bool] = False
     labels: Optional[Dict[str, str]] = Field(default_factory=dict) 
     noDataState: str = "NoData"
-    notification_settings: Optional[None] = Field(default=None)
+    notification_settings: Optional[dict] = Field(default=None)
     orgID: int = 1 
     provenance: Optional[str] = Field(default=None) 
     record: Optional[None] = Field(default=None)

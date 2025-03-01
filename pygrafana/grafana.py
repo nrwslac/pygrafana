@@ -37,7 +37,8 @@ def fetch_alert(alert_uid, grafana_server_url=grafana_server_url):
         headers=headers,
         verify=False
     )   
-    return response.text
+    #return response.text
+    return response
 
 def update_alert_rule(alert_uid, body, grafana_server_url=grafana_server_url):
     headers = { 
@@ -74,13 +75,14 @@ def create_alert_rule(body, grafana_server_url=grafana_server_url):
         "Accept": "application/json",
         "Content-Type": "application/json",
         "Authorization": "Bearer " + token
-    }   
+    }
     response = requests.post(
         grafana_server_url + "/api/v1/provisioning/alert-rules",
         headers=headers,
         data=body,
         verify=False
-    )   
+    )
+    return response
     #print(response.json())
     #print(response.headers)
 
