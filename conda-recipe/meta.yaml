@@ -1,4 +1,4 @@
-{% set package_name = "git@github.com:pcdshub/pygrafana.git" %}
+{% set package_name = "pygrafana" %}
 {% set import_name = "pygrafana" %}
 {% set version = load_file_regex(load_file=os.path.join(import_name, "_version.py"), regex_pattern=".*version = '(\S+)'").group(1) %}
 
